@@ -1,0 +1,50 @@
+.footer {
+  background-color: #2F3645;
+  color: #fff;
+  padding: 1rem 0; /* Reduced padding */
+  font-size: 0.8rem; /* Slightly reduced font size */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 0.5rem; /* Reduced margin */
+}
+
+.footer-section h3 {
+  font-size: 1rem; /* Reduced font size */
+  margin-bottom: 0.5rem; /* Reduced margin-bottom */
+}
+
+.footer-section p {
+  margin: 0.3rem 0; /* Reduced margin */
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  color: #fff;
+  margin-right: 0.5rem; /* Reduced margin-right */
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #6f42c1; /* You can adjust this color based on your design */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 0.5rem; /* Reduced margin-top */
+  border-top: 1px solid #444;
+  padding-top: 0.5rem; /* Reduced padding-top */
+}

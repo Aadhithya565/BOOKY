@@ -1,0 +1,150 @@
+/* General Styling */
+.fantasy-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.fantasy-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.fantasy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+}
+
+.fantasy-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.fantasy-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fantasy-title {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.fantasy-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.fantasy-rating {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+.fantasy-rating .fantasy-stars {
+    display: flex;
+    justify-content: center;
+}
+
+.fantasy-rating .fa-star,
+.fantasy-rating .fa-star-half-alt,
+.fantasy-rating .fa-star {
+    color: #FFD700;
+    margin: 0 1px;
+    font-size: 1.2rem; /* Adjust star size to fit within the card */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .fantasy-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+
+    .fantasy-card {
+        max-width: 300px;
+    }
+
+    .fantasy-title {
+        font-size: 1.4rem;
+    }
+
+    .fantasy-description {
+        font-size: 0.9rem;
+    }
+
+    .fantasy-rating .fa-star,
+    .fantasy-rating .fa-star-half-alt,
+    .fantasy-rating .fa-star {
+        font-size: 1rem; /* Adjust star size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .fantasy-grid {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+        gap: 15px;
+    }
+
+    .fantasy-card {
+        max-width: 250px;
+    }
+
+    .fantasy-title {
+        font-size: 1.2rem;
+    }
+
+    .fantasy-description {
+        font-size: 0.8rem;
+    }
+
+    .fantasy-rating .fa-star,
+    .fantasy-rating .fa-star-half-alt,
+    .fantasy-rating .fa-star {
+        font-size: 0.9rem; /* Adjust star size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .fantasy-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .fantasy-card {
+        max-width: 280px;
+    }
+
+    .fantasy-title {
+        font-size: 1rem;
+    }
+
+    .fantasy-description {
+        font-size: 0.8rem;
+    }
+
+    .fantasy-image {
+        max-height: 200px;
+    }
+
+    .fantasy-rating .fa-star,
+    .fantasy-rating .fa-star-half-alt,
+    .fantasy-rating .fa-star {
+        font-size: 0.8rem; /* Further adjust star size for very small screens */
+    }
+}

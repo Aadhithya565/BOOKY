@@ -1,0 +1,237 @@
+/* Login styles */
+.login_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://wallpaper.forfun.com/fetch/f6/f683a78da4c31d9e0db35612aa652da3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway',sans-serif;
+}
+
+.login_form_container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px -2px rgb(0, 0, 0 / 20%), 0px 3px 4px 0px rgb(0, 0, 0 / 14%), 0px 1px 8px 0px rgb(0, 0, 0 / 12%);
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.305);
+    transition: flex 0.8s ease-in-out, transform 0.8s ease-in-out; /* Smooth form transition */
+}
+
+.login_form_container .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #A84448; */
+    transition: flex 0.8s ease-in-out, transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.login_form_container .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A84448; /* Add your desired color or style here */
+    transition: flex 0.8s ease-in-out, transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.login_form_container .left.large {
+    flex: 2;
+}
+
+.login_form_container .left.small {
+    flex: 1;
+}
+
+.login_form_container .right.large {
+    flex: 2;
+}
+
+.login_form_container .right.small {
+    flex: 1;
+}
+
+.login_form_container .form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_form_container .form_container h1 {
+    font-size: 40px;
+    margin-top: 0;
+    /* color: #edf5f3; */
+}
+
+.login_form_container .input {
+    outline: none;
+    border: none;
+    width: 370px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #edf5f3;
+    margin: 5px 0;
+    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+}
+
+.login_form_container .error_msg {
+    width: 370px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login_form_container .white_btn, .login_form_container .green_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 16	px;
+    cursor: pointer;
+    font-family: 'Raleway',sans-serif;
+}
+
+.login_form_container .green_btn {
+    margin: 10px;
+}
+
+/* Animation keyframes */
+@keyframes login_slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes login_slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.login_form_container .slideIn {
+    animation: login_slideInFromRight 1s ease-in-out;
+}
+
+.login_form_container .slideOut {
+    animation: login_slideOutToLeft 1s ease-in-out;
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .login_form_container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+  
+    .login_form_container .left, .login_form_container .right {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .login_form_container .left {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    .login_form_container .right {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .login_form_container {
+      width: 95%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .login_form_container .left, .login_form_container .right {
+      padding: 10px;
+    }
+  
+    .login_form_container .form_container h1 {
+      font-size: 1.5em;
+    }
+  
+    .login_form_container .input {
+      max-width: 100%;
+    }
+  
+    .login_form_container .error_msg {
+      max-width: 100%;
+    }
+  
+    .login_form_container .white_btn, .login_form_container .green_btn {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+/* Google Bar Button Styling */
+.google_bar_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4285F4;
+  text-align: center;
+}
+
+.google_bar_btn:hover {
+  background-color: #f1f1f1;
+}
+
+.google_icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 576px) {
+  .google_bar_btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .google_icon {
+    font-size: 18px;
+  }
+}

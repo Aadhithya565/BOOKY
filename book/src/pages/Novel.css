@@ -1,0 +1,148 @@
+/* General Styling */
+.novel-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.novel-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.novel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+}
+
+.novel-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.novel-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.novel-title {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.novel-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.novel-rating {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+.novel-rating .novel-stars {
+    display: flex;
+    justify-content: center;
+}
+
+.novel-rating .fa-star,
+.novel-rating .fa-star-half-alt,
+.novel-rating .fa-star {
+    color: #FFD700;
+    margin: 0 1px;
+    font-size: 1.2rem; /* Adjust star size to fit within the card */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .novel-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+
+    .novel-card {
+        max-width: 300px;
+    }
+
+    .novel-title {
+        font-size: 1.4rem;
+    }
+
+    .novel-description {
+        font-size: 0.9rem;
+    }
+
+    .novel-rating .fa-star,
+    .novel-rating .fa-star-half-alt,
+    .novel-rating .fa-star {
+        font-size: 1rem; /* Adjust star size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .novel-grid {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+        gap: 15px;
+    }
+
+    .novel-card {
+        max-width: 250px;
+    }
+
+    .novel-title {
+        font-size: 1.2rem;
+    }
+
+    .novel-description {
+        font-size: 0.8rem;
+    }
+
+    .novel-rating .fa-star,
+    .novel-rating .fa-star-half-alt,
+    .novel-rating .fa-star {
+        font-size: 0.9rem; /* Adjust star size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .novel-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .novel-card {
+        max-width: 280px;
+    }
+
+    .novel-title {
+        font-size: 1rem;
+    }
+
+    .novel-description {
+        font-size: 0.8rem;
+    }
+
+    .novel-image {
+        max-height: 200px;
+    }
+
+    .novel-rating .fa-star,
+    .novel-rating .fa-star-half-alt,
+    .novel-rating .fa-star {
+        font-size: 0.8rem; /* Further adjust star size for very small screens */
+    }
+}

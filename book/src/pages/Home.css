@@ -1,0 +1,248 @@
+/* General Styling */
+.home-container {
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('../images/b10.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.search-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 15px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ddd;
+  width: 300px;
+  font-size: 1rem;
+  font-family: 'Raleway',sans-serif;
+}
+
+.search-button {
+  padding: 15px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #ddd;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Trending Books Section */
+.trending-books-section {
+  padding: 50px 20px;
+}
+
+.trending-books-section .section-content {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trending-books-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  width: 260px; /* Adjust card width */
+  height: 350px; /* Adjust card height */
+  box-sizing: border-box;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.book-image {
+  width: 100%;
+  height: 150px; /* Adjust image height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.book-card p{
+  margin:  5px 0;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.book-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.book-rating {
+  font-size: 1.2rem;
+  color: #FFD700; /* Gold color for stars */
+}
+
+.book-rating .fa-star,
+.book-rating .fa-star-half-alt,
+.book-rating .fa-star {
+  color: #FFD700; /* Gold color for stars */
+  margin: 0 2px;
+}
+
+/* Ensure the star rating aligns well with other content */
+.book-rating .fa-star-half-alt {
+  color: #FFD700;
+}
+
+.scroll-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+/* Adjust container width to ensure 3 cards in view */
+.trending-books-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 20px; /* Space between cards */
+  width: calc(100% - 60px); /* Adjust container width */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .hero-section {
+    height: 50vh; /* Adjusted for medium screens */
+  }
+
+  .search-input {
+    max-width: 280px;
+  }
+
+  .search-input:focus {
+    max-width: 320px;
+  }
+
+  .book-card {
+    width: 200px; /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    height: 40vh; /* Adjusted for smaller screens */
+  }
+
+  .search-input {
+    max-width: 250px;
+  }
+
+  .search-input:focus {
+    max-width: 290px;
+  }
+
+  .book-card {
+    width: 180px; /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 30vh; /* Adjusted for mobile screens */
+  }
+
+  .search-input {
+    max-width: 220px;
+  }
+
+  .search-input:focus {
+    max-width: 260px;
+  }
+
+  .book-card {
+    width: 160px; /* Adjust card width for mobile screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    height: 20vh; /* Adjusted for extra small screens */
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 100%;
+    border-radius: 30px 30px 0 0; /* Adjusted for column layout */
+    margin-bottom: 0.5em;
+  }
+
+  .search-button {
+    width: 100%;
+    border-radius: 0 0 30px 30px; /* Adjusted for column layout */
+  }
+
+  .search-button i {
+    margin-right: 0;
+  }
+
+  .book-card {
+    width: 140px; /* Adjust card width for extra small screens */
+  }
+}

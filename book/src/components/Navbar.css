@@ -1,0 +1,232 @@
+/* General Styles */
+.navbar {
+  padding: 1.8rem 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.navbar-brand img {
+  width: 70px; 
+}
+
+.navbar-brand span {
+  margin-left: 1.5rem; 
+  font-size: 2rem; 
+  font-weight: 700;
+  text-decoration: none; 
+  color: #333;
+}
+
+.navbar-toggler-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 11;
+}
+
+.navbar-collapse {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #000;
+  height: 100%;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 3rem 0 3rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.show-navbar-collapse {
+  transform: translateX(0);
+}
+
+.nav-item {
+  margin-bottom: 1.4rem;
+  list-style: none; /* Removes dot beside icons */
+}
+
+.nav-link {
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none; /* Ensures no underline on links */
+}
+
+.nav-link:hover {
+  color: #445069;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons .nav-item {
+  margin-left: 2.8rem;
+}
+/* Add your existing CSS here */
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide the dropdown initially */
+  z-index: 1000;
+  list-style-type: none; /* Remove the bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.dropdown-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  background-color: #f8f9fa;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown .dropdown-menu.show {
+  display: block; /* Show the dropdown when hovered or toggled */
+}
+.supercoins {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.supercoins img {
+  width: 35px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.supercoins span {
+  font-size: 20px;
+  color: black
+}
+
+/* Add this to Navbar.css */
+
+.profile-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+}
+
+.profile-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  display:none;
+}
+
+.profile-dropdown-item {
+  padding: 10px 20px;
+}
+
+.profile-dropdown-link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1rem;
+}
+/* 
+.profile-dropdown-link:hover {
+  background-color: #444;
+} */
+.nav-item:hover .profile-dropdown-menu{
+  display: block;
+}
+
+
+/* Responsive Styles */
+@media screen and (min-width: 992px) {
+  .navbar-collapse {
+    position: relative;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    transform: translateX(0);
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-toggler-btn {
+    display: none;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+    margin-left: 2.8rem;
+    list-style: none; /* Ensures no dots beside icons */
+  }
+
+  .nav-link {
+    color: #010101;
+    font-size: 1.1rem;
+    font-weight: 500 !important;
+    opacity: 0.8;
+    text-decoration: none; /* Ensures no underline on links */
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+}

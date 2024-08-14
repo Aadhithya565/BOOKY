@@ -1,0 +1,15 @@
+.collection-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .collection-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .collection-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
